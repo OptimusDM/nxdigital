@@ -104,11 +104,7 @@ class Career extends Component {
                       <span>hiring</span>
                     </h2>
                     <span className="animate-border ml-auto mr-auto tw-mt-20 tw-mb-40" />
-                    <p>
-                      If you are looking for change email your CV with subject
-                      &apos;Applying for the post of &quot;Job Title&quot;&apos;
-                      @ connect@nxdigital.com.au
-                    </p>
+
                   </div>
                   {/* section Heading End */}
                 </div>
@@ -202,7 +198,18 @@ class Career extends Component {
                                      {/* header end */}
                                      <div className="entry-content">
                                        <p>
-                                         {job.description}
+                                         {job.summary}
+                                       </p>
+                                       <p>
+                                         {job.responsibilities.description}
+                                       </p>
+                                       <ul>
+                                         {
+                                           job.responsibilities.duties.map(duty => <li>{duty}</li>)
+                                         }
+                                       </ul>
+                                       <p>
+                                         {job.responsibilities.footer}
                                        </p>
                                      </div>
                                      {/* End Entry Content */}
